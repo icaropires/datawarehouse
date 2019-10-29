@@ -46,7 +46,7 @@ CREATE TABLE OCORRENCIA (
     logradouro VARCHAR(50) NOT NULL,
     cidade VARCHAR(50) NOT NULL,
     latitude FLOAT,
-    longitute FLOAT,
+    longitude FLOAT,
 
     numBO INTEGER NOT NULL,
 
