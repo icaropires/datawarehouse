@@ -71,7 +71,7 @@ LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv'
         anoBO = @ano_bo,
         rubrica = @rubrica,
         idDelegacia = @id_delegacia,
-        idOcorrencia = (SELECT idOcorrencia FROM OCORRENCIA WHERE numBO = @num_bo);
+        idOcorrencia = (SELECT idOcorrencia FROM OCORRENCIA WHERE numBO = @num_bo AND anoBO = @ano_bo);
 
 LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv' 
     REPLACE
@@ -93,4 +93,5 @@ LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv'
         cidade = @cidade,
         latitude = @latitude,
         longitude = @longitude,
-        numBO = @num_bo;
+        numBO = @num_bo,
+        anoBO = @ano_bo;
