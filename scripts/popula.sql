@@ -25,7 +25,9 @@ CSV Columns
 21 - FLAG_STATUS
 */
 
-SET sql_mode = ''; -- Allow zero day
+USE tf_icaro_sara;
+
+SET sql_mode = ''; -- Allow zero as day
 
 LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv' 
     REPLACE
