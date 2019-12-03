@@ -1,3 +1,23 @@
+-- --------     << TF >>     ------------
+--
+--                    SCRIPT DE CRIACAO (DDL)
+--
+-- Data Criacao ...........: 29/10/2019
+-- Autor(es) ..............: Sara Silva
+--                           Ícaro Pires
+-- Banco de Dados .........: MySQL
+-- Banco de Dados(nome) ...: tf_icaro_sara
+--
+-- Data Ultima Alteracao ..: 29/10/2019
+--   => Criacao das tabelas
+--   => Correção
+--
+-- PROJETO => 01 Base de Dados
+--         => 04 Tabelas
+--         => 01 Visoes
+--         => 02 usuários
+--
+-- -----------------------------------------------------------------
 CREATE DATABASE tf_icaro_sara;
 USE tf_icaro_sara;
 
