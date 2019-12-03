@@ -72,8 +72,7 @@ LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv'
     SET numBO = @num_bo,
         anoBO = @ano_bo,
         rubrica = @rubrica,
-        idDelegacia = @id_delegacia,
-        idOcorrencia = (SELECT idOcorrencia FROM OCORRENCIA WHERE numBO = @num_bo AND anoBO = @ano_bo);
+        idDelegacia = @id_delegacia;
 
 LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv' 
     REPLACE
@@ -86,7 +85,9 @@ LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv'
         TERMINATED BY '\n'
     IGNORE 1 LINES
     (@num_bo, @ano_bo, @id_delegacia, @nome_departamento, @nome_seccional, @delegacia, @nome_departamento_circ, @nome_seccional_circ, @nome_delegacia_circ, @ano, @mes, @flag_status, @rubrica, @desdobramento, @conduta, @latitude, @longitude, @cidade, @logradouro, @numero_logradouro, @flag_status, @dummy)
-    SET data = STR_TO_DATE(CONCAT(@mes, '-', @ano), '%m-%Y'),
+    SET numBO = @num_bo,
+	anoBO = @ano_bo,
+	data = STR_TO_DATE(CONCAT(@mes, '-', @ano), '%m-%Y'),
         desdobramento = @desdobramento,
         status = @flag_status,
         conduta = @conduta,
@@ -94,6 +95,4 @@ LOAD DATA LOCAL INFILE '/dataset/BO_2016.csv'
         logradouro = @logradouro,
         cidade = @cidade,
         latitude = @latitude,
-        longitude = @longitude,
-        numBO = @num_bo,
-        anoBO = @ano_bo;
+        longitude = @longitude;

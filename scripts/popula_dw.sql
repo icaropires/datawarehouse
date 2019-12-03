@@ -2,6 +2,12 @@ USE tf_icaro_sara_dw;
 
 SET sql_mode = ''; -- Allow zero as day
 
+DELIMITER @
+CREATE PROCEDURE insert_into_twoTables(name varchar(100),age int)
+BEGIN
+END@
+DELIMITER ;
+
 INSERT INTO TEMPO(data)
 	SELECT data FROM tf_icaro_sara.OCORRENCIA;
 
